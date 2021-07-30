@@ -1,0 +1,20 @@
+git rm 删除文件
+git init 初始化仓库
+git status 查看工作区状态
+git diff 查看修改记录
+git checkout name  撤回
+git add 添加暂存区
+git commit -m 备注 提交本地仓库
+git clone 地址 克隆
+git swtich -c name 创建切换分支
+git swtich name 切换分支
+git branch 查看分支
+git branch name 创建分支
+git branch -d 删除分支
+git remote -v查看
+git remote rm origin 删除origin
+git reset head code码 回退版本
+git merge 指定分支 合并分支
+git log 查看提交历史
+git reflog 查看命令历史
+
