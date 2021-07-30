@@ -16,7 +16,7 @@ git branch name 创建分支
 git branch -d 删除分支
 git remote -v查看
 git remote rm origin 删除origin
-git reset head code码 回退版本
+git reset head hash值 回退版本  hash值可通过git log 来查看历史中每次提交的hash 凭借这个hash来退回
 git merge 指定分支 合并分支
 git log 查看提交历史
 git reflog 查看命令历史
