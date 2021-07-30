@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <img  class="BG" src="1.png" alt="">
+        <div class="birdBox">
+            <img class="bird" src="niao/1_00029.png" alt="">
+        </div>
+        <img class="right"  src="shuimo/1_00029.png" alt="">
+    </div>
+    <script>
+        var i = 0;
+        var nowTime = 0;
+        //每一次动画结束的时间
+        var lastOverTime = Date.now()
+        
+        //自定义时间差
+        var customTime = 140;
+        function rightSwitch() {
+            if(i < 10) {
+                $('.right').attr('src',`shuimo/1_000${'0' + i}.png`)
+            } else {
+                $('.right').attr('src',`shuimo/1_000${i}.png`)
+            }
+            i ++;
+            i %= 29;
+        }
+        // function styleMove() {
+            $('.bridBox').click = function () {
+                $('.brid').animate({left:'+10px'})
+            }
+            
+        // }
+        function birdSwitch() {
+            if(i < 10) {
+                $('.bird').attr('src',`niao/1_000${'0' + i}.png`)
+            } else {
+                $('.bird').attr('src',`niao/1_000${i}.png`)
+            }
+            i ++;
+            i %= 29;
+        }
+        function render() {
+            //记录当前时间
+            nowTime = Date.now();
+            // console.log(nowTime+'a',lastOverTime+'b')
+            //当前时间减去上次执行时间如果大于自定义时间差，执行循环，并把当前时间赋值给上次执行时间，然后循环判断
+            if(nowTime - lastOverTime > customTime) {
+               lastOverTime = nowTime;
+               rightSwitch();
+               birdSwitch();
+            //    styleMove();
+            }
+            window.requestAnimationFrame(render);
+        }
+        render()
+            
+    </script>
+
+    <style>
+        .box {
+            width: 438px;
+            height: 700px;
+            position: relative;
+        }
+        .BG {
+            width: 438px;
+            height: 700px;
+            object-fit: contain;
+        }
+        .right {
+            width: 100%;
+            height: 260px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .birdBox{
+            width: 200px;
+            height: 120px;
+            position: absolute;
+            top: 0;
+        }
+        .bird {
+            width: 200px;
+            height: 120px;
+        }
+        
+    </style>
+</body>
+</html>
