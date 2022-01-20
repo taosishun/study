@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<meta charset="utf-8">
+	<title>ido</title>
+	<link href="//cdn.pannacloud.com/css/panna_com.1.0.3.css" rel="stylesheet">
+	<link href="//cdn.pannacloud.com/lib/swiper/6.6.2/swiper-bundle.min.css" rel="stylesheet">
+	<link href="//cdn.pannacloud.com/css/popup.css" rel="stylesheet">
+	<link href="css/index.css?v=1" rel="stylesheet">
+	<script src="//cdn.pannacloud.com/jquery/jquery-3.1.1.min.js"></script>
+	<script src="//cdn.pannacloud.com/lib/createjs/preloadjs.min.js"></script>
+	<script src="//cdn.pannacloud.com/lib/createjs/soundjs.min.js"></script>
+	<script src="//cdn.pannacloud.com/js/pn_com.js"></script>
+	<script src="//cdn.pannacloud.com/js/popup.js"></script>
+	<script src="//cdn.pannacloud.com/lib/scroll/bscroll.min.js"></script>
+	<script src="//cdn.pannacloud.com/lib/swiper/6.6.2/swiper-bundle.min.js"></script>
+	<script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script src="//cdn.pannacloud.com/js/share-wx.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="../../turnjs4/samples/basic/css/basic.css"/>
+	<script type="text/javascript" src="../../turnjs4//extras/modernizr.2.5.3.min.js"></script> -->
+	
+	<script>
+		Share.shareOption({
+			link: '',
+			pic: '',
+			title: '',
+			desc: '',
+			success: function () {},
+		});
+	</script>
+</head>
+
+<body>
+	<!-- loading界面 -->
+	<div class="loading loading-panna" id="loading">
+		<!-- <image class="loadingBg" src="/img/loading.png" > -->
+			<div class="loadingArea">
+				<img class="loadingSvg" src="//cdn.pannacloud.com/img/loading/loading18.svg">
+				<p class="loading-percent">0%</p>
+			</div>
+		<!-- </image> -->
+		
+	</div>
+
+	<div class="main">
+		<div class="preloadBg index" data-src="/img/index/bg.png">
+			<img class="preload logo postion" data-src="img/index/logo.png" alt="">
+			<img class="preload xcxzm postion" data-src="img/index/xcxzm.png" alt="">	
+			<img class="btnStyle preload postion xcxjj" data-src="img/index/xcxjj.png">
+			<img class="btnStyle preload postion tpgz" data-src="img/index/tpgz.png">
+			<img class="btnStyle preload postion ssph" data-src="img/index/ssph.png">
+			<img class="btnStyle preload postion cytp" data-src="img/index/cytp.png">
+			<img class="preload postion dhk1" data-src="img/index/dhk1.png">
+			<img class="preload postion dhk2" data-src="img/index/dhk2.png">
+			<img class="preload postion yunduo" data-src="img/index/yunduo.png">
+			<div class="mask" hidden>
+				<img class="preload guize postion" data-src="img/index3/guize.png">
+				<img class="preload close postion" data-src="img/index3/close.png">
+				<div class="text fontSize postion" >1，投票时间:</div>
+				<div class="text1 fontSize postion" >2021.8.13-2021.8.20</div>
+				<div class="text2 fontSize postion">2，每人每天可以参与投票三次</div>
+				<div class="text3 fontSize postion">3，第99名，第199名，第299名，第399名，第499名，第599名参与投票的用户可获得小米榨汁机一台。</div>
+				<div class="text4 fontSize postion">4，中将用户请将个人信息(姓名+电话+地址) 发送至楚天地产集团微信公众号对话框，以便奖品邮寄。</div>
+			</div>
+		</div>
+
+		<div class="index5 "hidden>
+			<img class="preloadBg xcxBg postion" data-src="/img/index5/erweimaye.png">
+			<img class="preload wxewm postion" src="/img/index5/erweima.png">
+		</div>
+		<!-- <div class="bg2"hidden>333</div>
+		<div class="bg3"hidden>444</div> -->
+	</div>
+
+	<script src="//cdn.pannacloud.com/js/pn_loader.js"></script>
+	<script>
+		window.onload = function () {
+			$.comFunc().config({
+				prevent: true, //是否阻止微信端页面整体下拉
+				// arrow: true, // 是否显示滑动指示箭头
+				test: true, //是否显示测试文字
+				screenLock: true, //是否显示横屏锁定提示
+				//screenLockUrl:"img/bg2.jpg",   //锁定提示图片
+				//music:'mp3/music.mp3',   // 播放音乐
+				// arrowImgUrl: "", // 不定义图片路径，则使用默认图片
+				//musicImgUrl:["images/m-open.png","images/m-close.png"]  // 同上 1播放时图片 2关闭时图片
+			});
+		};
+		var sourceData = [
+			// 	{
+			// 	id: 'bgm',
+			// 	src: './media/bgm.mp3'
+			// }
+		];
+
+		$(function () {
+			$.bugFixed();
+			$.winInit(750);
+
+			var loader;
+			loader = $.loader({
+				staticResource: sourceData,
+				bgmCtrl: true,
+				//  bgmCtrlIcon: [
+				//     {src: 'img/music_on.png', id: 'music-open'},
+				//     {src: 'img/music_off.png', id: 'music-close'}
+				//     ],
+				handleLoading: function (evt) {
+					var cProgress = Math.floor(evt.loaded * 100);
+					$('.loading-percent').html(cProgress + '%');
+				},
+				handleFileLoaded: function (event) {},
+				handleComplete: function () {
+					$('.loading').fadeOut(500, function () {
+						$(this).remove();
+					})
+				},
+			});
+			
+			$('.tpgz').click(function(){
+				$('.mask').fadeIn()
+			})
+			$('.close').click(function(){
+				$('.mask').fadeOut()
+			})
+			$('.xcxjj').click(function(){
+				$('.index').hide()
+				$('.index5').show()
+			})
+			// $.statistics(document.title); 
+
+		});
+	</script>
+</body>
+
+</html>

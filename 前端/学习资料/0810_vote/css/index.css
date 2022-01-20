@@ -1,0 +1,178 @@
+.main {
+    width: 100%;
+    height: 100%;
+}
+.postion {
+    position: absolute;
+}
+.index {
+    width: 100vw;
+    min-height: 100vh;
+    background-size: 100% 100%;
+    position: relative;
+}
+.index .logo {
+    width: 1.6rem !important;
+    height: .6rem;
+    top: 4vh;
+    left: 7vw;
+}
+.index .xcxzm{
+    width: 4.6rem;
+    height: 2rem;
+    top: 11%;
+    left: 20%;
+}
+.index .btnStyle {
+    width: 2.7rem;
+    height: 0.9rem;
+}
+.index .xcxjj {
+    bottom: 19vh;
+    left: 10vw;
+}
+.index .tpgz {
+    bottom: 8vh;
+    left: 10vw;
+}
+.index .ssph {
+    bottom: 8vh;
+    left: 54vw;
+}
+.index .cytp {
+    bottom: 19vh;
+    left: 54vw;
+}
+.index .dhk1{
+    width: 3.2rem;
+    height: 1.8rem;
+    bottom: 58vh;
+    left: 3vw;
+    animation: dhk1Left 2s infinite;
+    animation-iteration-count: 1;
+}
+@keyframes dhk1Left {
+    from, 60%, 75%, 90%, to {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}
+    0% {opacity: 0;transform: translate3d(-3000px, 0, 0);}
+    60% {opacity: 1;transform: translate3d(25px, 0, 0);}
+    75% {transform: translate3d(-10px, 0, 0);}
+    90% {transform: translate3d(5px, 0, 0);}
+    100% {opacity: 1;transform: none;}
+}
+.index .dhk2{
+    width: 5.2rem;
+    height: 4.1rem;
+    bottom: 38vh;
+    left: 28vw;
+    animation: dhk1right 2s infinite;
+    animation-iteration-count: 1;
+}
+@keyframes dhk1right {
+    from, 60%, 75%, 90%, to {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}
+    0% {opacity: 0;transform: translate3d(3000px, 0, 0);}
+    60% {opacity: 1;transform: translate3d(-25px, 0, 0);}
+    75% {transform: translate3d(10px, 0, 0);}
+    90% {transform: translate3d(-5px, 0, 0);}
+    100% {opacity: 1;transform: none;}
+}
+
+
+.index .yunduo {
+    width: 2.1rem;
+    height: 1.1rem;
+    bottom: 63vh;
+    left: 52vw;
+    animation: yunduoOption 3s infinite;
+    animation-iteration-count: 1;
+
+    animation: scale 1.3s infinite;
+
+}
+@keyframes yunduoOption {
+    from{opacity: 0;transform: scale(2.5);}
+    to{opacity: 1;transform: scale(1);}
+}
+@keyframes scale {
+    0%{opacity: 1;transform: scale(1);}
+    50%{opacity: 1;transform: scale(1.2);}
+    100%{opacity: 1;transform: scale(1);}
+}
+
+
+.index .mask {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    position: relative;
+}
+.index .guize {
+    width: 5.4rem !important;
+    height: 8.3rem;
+    left: 14vw;
+    top: 29vh;
+    background-size: 100% 100%;
+}
+.index .text {
+    left: 20vw;
+    top: 45vh;
+}
+.index .text1 {
+    left: 20vw;
+    top: 49vh;
+}
+.index .text2 {
+    left: 20vw;
+    top: 53vh;
+}
+.index .text3 {
+    left: 20vw;
+    top: 57vh;
+}
+.index .text4 {
+    left: 20vw;
+    top: 70vh;
+}
+.index .fontSize {
+    width: 4.5rem;
+    font-size: 16px;
+}
+.index .close {
+    width: 0.4rem !important;
+    height: 0.4rem;
+    top: 33vh;
+    left: 79vw;
+}
+
+.index .index5 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.index5 .xcxBg{
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+}
+.index5 .wxewm{
+    width: 2rem;
+    height: 2rem;
+    left: 36vw;
+    top: 67vh;
+    animation: wxewm 1s infinite;
+    animation-iteration-count: 1;
+    
+}
+@keyframes wxewm {
+    /*  cubic-bezier运动曲线*/
+    from, 60%, 75%, 90%, 
+    to {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}
+    0% {opacity: 0;transform: translate3d(3000px, 0, 0);}
+    30% {opacity: 0.5;transform: translate3d(1500px, 0, 0);}
+    60% {opacity: 1;transform: translate3d(-25px, 0, 0);}
+    75% {transform: translate3d(10px, 0, 0);}
+    90% {transform: translate3d(-5px, 0, 0);}
+    100% {opacity: 1;transform: none;}
+    
+}
